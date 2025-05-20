@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+}
+
+@custom-variant dark (&:is(.dark *));
+.dark {
+}
+
+@theme inline {
+}
+
+@layer base {
+	body {
+		@apply w-screen min-h-dvh
+		antialiased;
+	}
+}
