@@ -50,7 +50,7 @@
 	}
 
 	body {
-		@apply w-screen min-h-dvh
+		@apply w-screen min-h-dvh relative
 		bg-background
 		text-foreground
 		antialiased;
