@@ -21,6 +21,12 @@ function AppPage() {
 					}
 				/>
 			</header>
+			<footer className={"text-center"}>
+				<p className={"text-sm text-muted"}>
+					© {new Date().getFullYear()} Silas Schulreich. All rights
+					reserved.
+				</p>
+			</footer>
 		</main>
 	);
 }
