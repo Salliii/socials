@@ -21,6 +21,8 @@ cd socials
 npm install
 ```
 
+Replace the `avatar.png` file in `./public` with the avatar image you want to use.
+
 Run the development server:
 ```bash
 npm run dev
