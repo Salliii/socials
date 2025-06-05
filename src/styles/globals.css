@@ -1,18 +1,56 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 :root {
-}
+	--radius: 0.75rem;
 
-@custom-variant dark (&:is(.dark *));
-.dark {
+	--background: var(--color-zinc-950);
+	--foreground: var(--color-zinc-50);
+	--primary: var(--color-emerald-500);
+	--primary-foreground: var(--color-zinc-50);
+	--primary-text: var(--color-emerald-400);
+	--primary-alt: var(--color-teal-500);
+	--primary-alt-foreground: var(--color-zinc-50);
+	--primary-alt-text: var(--color-teal-400);
+	--muted: var(--color-zinc-500);
+	--border: color-mix(in oklch, var(--color-white) 10%, transparent);
+	--ring: var(--color-emerald-500);
 }
 
 @theme inline {
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-primary-text: var(--primary-text);
+	--color-primary-alt: var(--primary-alt);
+	--color-primary-alt-foreground: var(--primary-alt-foreground);
+	--color-primary-alt-text: var(--primary-alt-text);
+	--color-muted: var(--muted);
+	--color-border: var(--border);
+	--color-ring: var(--ring);
 }
 
 @layer base {
+	* {
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+		@apply border-border;
+	}
+
+	*::-webkit-scrollbar {
+		display: none;
+	}
+
 	body {
 		@apply w-screen min-h-dvh
+		bg-background
+		text-foreground
 		antialiased;
 	}
 }
