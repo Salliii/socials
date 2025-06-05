@@ -13,6 +13,7 @@
 	--primary-alt-foreground: var(--color-zinc-50);
 	--primary-alt-text: var(--color-teal-400);
 	--muted: var(--color-zinc-500);
+	--card: color-mix(in oklch, var(--color-white) 5%, transparent);
 	--border: color-mix(in oklch, var(--color-white) 10%, transparent);
 	--ring: var(--color-emerald-500);
 }
@@ -32,6 +33,7 @@
 	--color-primary-alt-foreground: var(--primary-alt-foreground);
 	--color-primary-alt-text: var(--primary-alt-text);
 	--color-muted: var(--muted);
+	--color-card: var(--card);
 	--color-border: var(--border);
 	--color-ring: var(--ring);
 
