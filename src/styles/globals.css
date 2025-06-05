@@ -12,6 +12,9 @@
 	--primary-alt: var(--color-teal-500);
 	--primary-alt-foreground: var(--color-zinc-50);
 	--primary-alt-text: var(--color-teal-400);
+	--destructive: var(--color-red-500);
+	--destructive-foreground: var(--color-zinc-50);
+	--destructive-text: var(--color-red-400);
 	--muted: var(--color-zinc-500);
 	--card: color-mix(in oklch, var(--color-white) 5%, transparent);
 	--border: color-mix(in oklch, var(--color-white) 10%, transparent);
@@ -32,6 +35,9 @@
 	--color-primary-alt: var(--primary-alt);
 	--color-primary-alt-foreground: var(--primary-alt-foreground);
 	--color-primary-alt-text: var(--primary-alt-text);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+	--color-destructive-text: var(--destructive-text);
 	--color-muted: var(--muted);
 	--color-card: var(--card);
 	--color-border: var(--border);
@@ -44,7 +50,8 @@
 	* {
 		scrollbar-width: none;
 		-ms-overflow-style: none;
-		@apply border-border;
+		@apply border-border
+		selection:bg-primary/80;
 	}
 
 	*::-webkit-scrollbar {
