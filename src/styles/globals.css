@@ -44,6 +44,8 @@
 	--color-ring: var(--ring);
 
 	--font-inter: var(--font-inter);
+
+	--tw-duration: 300ms;
 }
 
 @layer base {
