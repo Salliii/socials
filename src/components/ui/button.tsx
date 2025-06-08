@@ -83,4 +83,4 @@ function LinkButton({
 	);
 }
 
-export { PrimaryButton, DestructiveButton, GhostButton, LinkButton };
+export { PrimaryButton, DestructiveButton, GhostButton, LinkButton, Button };
