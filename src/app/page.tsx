@@ -1,4 +1,41 @@
+"use client";
+
+import { GithubIcon } from "@/components/icons/github";
+import { InstagramIcon } from "@/components/icons/instagram";
+import { LinkedinIcon } from "@/components/icons/linkedin";
+import { PortfolioIcon } from "@/components/icons/portfolio";
+import { SpotifyIcon } from "@/components/icons/spotify";
 import { Avatar } from "@/components/ui/avatar";
+import { SocialAction, SocialActionTitle } from "@/components/ui/social-action";
+import { ExternalLinkIcon } from "lucide-react";
+
+const socials = [
+	{
+		title: "Github",
+		href: "https://github.com/Salliii",
+		Icon: GithubIcon,
+	},
+	{
+		title: "LinkedIn",
+		href: "https://www.linkedin.com/in/silas-schulreich",
+		Icon: LinkedinIcon,
+	},
+	{
+		title: "Instagram",
+		href: "https://instagram.com/salliii_02",
+		Icon: InstagramIcon,
+	},
+	{
+		title: "Spotify",
+		href: "https://open.spotify.com/user/5otfy4jykovu1ypl938xzn7zf?si=Yxn1R807Teu2kBcuI-upnA",
+		Icon: SpotifyIcon,
+	},
+	{
+		title: "Portfolio",
+		href: "https://salliii.dev",
+		Icon: PortfolioIcon,
+	},
+];
 
 function AppPage() {
 	return (
@@ -21,6 +58,19 @@ function AppPage() {
 					}
 				/>
 			</header>
+			<section className={"space-y-4"}>
+				{socials.map(({ title, href, Icon }, index) => (
+					<SocialAction href={href} key={index} asLink>
+						<Icon />
+						<SocialActionTitle>{title}</SocialActionTitle>
+						<ExternalLinkIcon
+							className={
+								"text-muted group-hover:text-primary-text group-focus-visible:text-primary-text"
+							}
+						/>
+					</SocialAction>
+				))}
+			</section>
 			<footer className={"text-center"}>
 				<p className={"text-sm text-muted"}>
 					© {new Date().getFullYear()} Silas Schulreich. All rights
