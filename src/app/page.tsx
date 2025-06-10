@@ -41,9 +41,9 @@ function AppPage() {
 	return (
 		<main
 			className={
-				"w-full max-w-xl min-h-dvh mx-auto px-6 py-12 relative z-10"
+				"w-full max-w-xl min-h-dvh mx-auto px-6 py-12 relative z-10 flex flex-col"
 			}>
-			<header className={"text-center"}>
+			<header className={"mb-10 text-center"}>
 				<Avatar className={"mx-auto mb-6"} />
 				<h1
 					className={
@@ -54,11 +54,11 @@ function AppPage() {
 				<h2 className={"mb-2 text-xl text-muted"}>Salliii</h2>
 				<div
 					className={
-						"w-16 h-1 mx-auto bg-gradient-to-br from-primary to-primary-alt rounded-full mb-6"
+						"w-16 h-1 mx-auto bg-gradient-to-br from-primary to-primary-alt rounded-full"
 					}
 				/>
 			</header>
-			<section className={"space-y-4"}>
+			<section className={"space-y-4 flex-1"}>
 				{socials.map(({ title, href, Icon }, index) => (
 					<SocialAction href={href} key={index} asLink>
 						<Icon />
@@ -71,7 +71,7 @@ function AppPage() {
 					</SocialAction>
 				))}
 			</section>
-			<footer className={"text-center"}>
+			<footer className={"mt-12 text-center"}>
 				<p className={"text-sm text-muted"}>
 					© {new Date().getFullYear()} Silas Schulreich. All rights
 					reserved.
