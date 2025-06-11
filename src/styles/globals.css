@@ -53,7 +53,7 @@
 		scrollbar-width: none;
 		-ms-overflow-style: none;
 		@apply border-border
-		selection:bg-primary/80;
+		selection:bg-primary/40;
 	}
 
 	*::-webkit-scrollbar {
