@@ -83,3 +83,16 @@
 		antialiased;
 	}
 }
+
+@utility presence {
+	@apply overflow-hidden transition-all;
+}
+@utility presence-in {
+	@apply max-h-screen opacity-100 ease-in;
+}
+
+@utility presence-out {
+	@apply max-h-0 opacity-0 ease-out;
+}
+@custom-variant presence-in (&.presence-in);
+@custom-variant presence-out (&.presence-out);
