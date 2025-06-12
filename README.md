@@ -21,6 +21,13 @@ cd socials
 npm install
 ```
 
+Add the following environment variables to your `.env` file
+```text
+RESEND_API_KEY=""
+RESEND_CONTACT_FROM=""
+RESEND_CONTACT_TO=""
+```
+
 Replace the `avatar.png` file in `./public` with the avatar image you want to use.
 
 Run the development server:

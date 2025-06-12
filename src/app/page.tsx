@@ -3,11 +3,15 @@
 import { GithubIcon } from "@/components/icons/github";
 import { InstagramIcon } from "@/components/icons/instagram";
 import { LinkedinIcon } from "@/components/icons/linkedin";
+import { MailIcon } from "@/components/icons/mail";
 import { PortfolioIcon } from "@/components/icons/portfolio";
 import { SpotifyIcon } from "@/components/icons/spotify";
 import { Avatar } from "@/components/ui/avatar";
+import { ContactCard } from "@/components/ui/contact-card";
 import { SocialAction, SocialActionTitle } from "@/components/ui/social-action";
-import { ExternalLinkIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { ArrowRightIcon, ExternalLinkIcon } from "lucide-react";
+import React, { useState } from "react";
 
 const socials = [
 	{
@@ -38,6 +42,8 @@ const socials = [
 ];
 
 function AppPage() {
+	const [contactCardOpen, setContactCardOpen] = useState(false);
+
 	return (
 		<main
 			className={
@@ -74,6 +80,24 @@ function AppPage() {
 						/>
 					</SocialAction>
 				))}
+				<SocialAction
+					onClick={() => setContactCardOpen(!contactCardOpen)}>
+					<MailIcon />
+					<SocialActionTitle>Contact me</SocialActionTitle>
+					<ArrowRightIcon
+						className={cn(
+							"transition-transform",
+							contactCardOpen && "rotate-180"
+						)}
+					/>
+				</SocialAction>
+				<div
+					className={cn(
+						"presence duration-500 presence-out:mb-0",
+						contactCardOpen ? "presence-in" : "presence-out"
+					)}>
+					<ContactCard />
+				</div>
 			</section>
 			<footer className={"mt-12 text-center"}>
 				<p className={"text-sm text-muted"}>
