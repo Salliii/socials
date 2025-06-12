@@ -60,7 +60,11 @@ function AppPage() {
 			</header>
 			<section className={"space-y-4 flex-1"}>
 				{socials.map(({ title, href, Icon }, index) => (
-					<SocialAction href={href} key={index} asLink>
+					<SocialAction
+						href={href}
+						target={"_blank"}
+						key={index}
+						asLink>
 						<Icon />
 						<SocialActionTitle>{title}</SocialActionTitle>
 						<ExternalLinkIcon
