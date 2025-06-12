@@ -26,6 +26,18 @@ function CardContent({ className, ...props }: React.ComponentProps<"div">) {
 	return <div className={cn("px-6 space-y-4", className)} {...props} />;
 }
 
+function CardForm({ className, ...props }: React.ComponentProps<"form">) {
+	return (
+		<form
+			className={cn(
+				"px-6 space-y-4 flex flex-col overflow-visible",
+				className
+			)}
+			{...props}
+		/>
+	);
+}
+
 function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
 	return (
 		<div
@@ -47,4 +59,4 @@ function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
 	);
 }
 
-export { Card, CardHeader, CardContent, CardFooter, CardTitle };
+export { Card, CardHeader, CardContent, CardForm, CardFooter, CardTitle };
